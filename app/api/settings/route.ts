@@ -1,0 +1,20 @@
+import { NextApiRequest } from 'next';
+import { NextResponse } from 'next/server';
+import { groq } from 'next-sanity';
+import clientConfig from '@/state/sanity/clientConfig';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export async function GET(req: NextApiRequest) {
+  try {
+    const data = await clientConfig.fetch(groq`*[_type == 'settings']{
+        ..., 
+        'logo': logo.asset->url
+        }`);
+
+    return NextResponse.json(data);
+  } catch (err) {
+    console.log(err);
+  }
+}

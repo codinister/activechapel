@@ -14,7 +14,8 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Content',
-      type: 'cardThree',
+      type: 'array',
+      of: [{type: 'cardFour'}]
     }),
   ],
 });

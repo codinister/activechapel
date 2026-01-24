@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -53,16 +53,16 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(0.7727 0.154 65.2);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(0.3883 0.041 237.32);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: oklch(0.7727 0.154 65.2);
+  --accent-foreground: oklch(0.97 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
+  --border: oklch(0.7727 0.154 65.2);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -120,6 +120,60 @@
   }
   body {
     @apply bg-background text-foreground min-h-full;
+  }
 
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+  h5 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  h3 {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+  }
+  h1 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+}
+
+@layer utilities {
+  .hero-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hero-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    z-index: 2;
+    & > div {
+      text-align: center;
+      h6 {
+        color: white;
+      }
+      h1 {
+        @apply text-primary;
+      }
+    }
   }
 }

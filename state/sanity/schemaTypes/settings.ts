@@ -106,15 +106,6 @@ export default defineType({
       name: 'phone5',
       title: 'Phone Five',
       type: 'string',
-    }),
-
-    defineField({
-      name: 'flag',
-      title: 'Flag',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
-    }),
+    })
   ],
 });

@@ -17,13 +17,12 @@ import settings from './settings';
 
 export const schemaTypes = [
   blockContent,
-category,
+  category,
   cardOne,
   cardTwo,
   cardThree,
   cardFour,
   settings,
-
   post,
   hero,
   nurture,

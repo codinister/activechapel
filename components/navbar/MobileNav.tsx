@@ -1,0 +1,79 @@
+'use client';
+
+import { Title } from '@radix-ui/react-dialog';
+import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
+import navData from './navData';
+import { CiMenuFries } from 'react-icons/ci';
+import animDuration from '@/utils/animDuration';
+import { motion } from 'motion/react';
+import { variantOne } from '@/utils/animVariants';
+import useGetQuery from '@/state/query/useGetQuery';
+
+const MobileNav = () => {
+  const data = navData;
+  const { hiddenOne, visibleOne } = variantOne();
+  const sett = useGetQuery('settings', '/settings') || [];
+
+  return (
+    <div className=" block md:hidden">
+      <Sheet>
+        <div className="px-6 py-1 flex items-center justify-between shadow-lg fixed top-0 left-0 z-10 bg-white w-full">
+          <div>
+            <SheetTrigger className="mt-2">
+              <Title></Title>
+              <CiMenuFries className="cursor-pointer text-2xl" />
+            </SheetTrigger>
+          </div>
+          <div>
+            <p>{sett[0] && sett[0]?.title}</p>
+          </div>
+        </div>
+        <SheetContent className="p-6">
+          <div>
+            {sett[0] ? (
+              <motion.img
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                  transition: {
+                    duration: 2,
+                    delay: 1.5,
+                    ease: 'easeIn',
+                  },
+                }}
+                src={sett[0]?.logo}
+                width={70}
+                height={60}
+                alt=""
+              />
+            ) : (
+              ''
+            )}
+            <ul className="mt-14">
+              {data.map((v, k) => (
+                <li key={k} className="mb-6">
+                  <motion.a
+                    initial={hiddenOne}
+                    animate={visibleOne}
+                    transition={{
+                      delay: animDuration(k, 4) * 0.5,
+                      duration: 1,
+                      ease: 'easeIn',
+                    }}
+                    href={v.path}
+                  >
+                    {v.name}
+                  </motion.a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </SheetContent>
+      </Sheet>
+    </div>
+  );
+};
+
+export default MobileNav;
