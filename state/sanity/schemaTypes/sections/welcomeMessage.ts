@@ -14,7 +14,15 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Content',
-      type: 'cardFour'
+      type: 'cardFour',
+    }),
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
     }),
   ],
 });

@@ -5,7 +5,7 @@ import { NextStudio } from 'next-sanity/studio';
 
 const AdminDashboard = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-30">
       <NextStudio config={studioConfig} />
     </div>
   );

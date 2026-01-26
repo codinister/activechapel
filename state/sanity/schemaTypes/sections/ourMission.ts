@@ -14,7 +14,12 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Content',
-      type: 'cardOne'
+      type: 'cardOne',
+    }),
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
     }),
   ],
 });

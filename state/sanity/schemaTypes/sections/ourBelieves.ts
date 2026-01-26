@@ -22,5 +22,10 @@ export default defineType({
       type: 'array',
       of: [{ type: 'cardTwo' }],
     }),
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+    }),
   ],
 });
