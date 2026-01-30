@@ -153,20 +153,31 @@
 }
 
 @layer utilities {
-  .welcome-box{
-    position: relative; 
-    display: flex; 
-    justify-content: flex-end; 
-    align-items: center; 
+  .welcome-box {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     z-index: 2;
 
-    &::before{
+    &::before {
       content: '';
-      position: absolute; 
-      inset: 0; 
-      background-color: rgba(0,0,0, .6);
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
       z-index: -1;
     }
+  }
+  .page-header {
+    position: relative;
+    z-index: 2;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .hero-overlay::before {
     content: '';
@@ -179,7 +190,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
+    position: relative;
     z-index: 2;
     & > div {
       text-align: center;

@@ -14,6 +14,10 @@ import weeklyActivity from './sections/weeklyActivity';
 import welcomeMessage from './sections/welcomeMessage';
 import worship from './sections/worship';
 import settings from './settings';
+import family from './sections/family'
+import connect from './sections/connect';
+import caption from './sections/caption'
+import rescue from './sections/rescue';
 
 export const schemaTypes = [
   blockContent,
@@ -32,4 +36,8 @@ export const schemaTypes = [
   weeklyActivity,
   welcomeMessage,
   worship,
+  family,
+  connect,
+  caption, 
+  rescue
 ];

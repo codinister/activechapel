@@ -1,0 +1,45 @@
+'use client';
+
+import useGetQuery from '@/state/query/useGetQuery';
+
+const Worship = () => {
+  const wor = useGetQuery('worship', '/worship');
+
+  return (
+    <div className="py-15 bg-secondary">
+
+      <div className="mb-20 text-white text-center">
+      <p>{wor[0]?.subtitle}</p>
+      <h4>{wor[0]?.title}</h4>
+      </div>
+
+      <div className="flex container mx-auto gap-10">
+        {wor[0]
+          ? wor[0]?.content.map(
+              (
+                v: { subtitle: string; title: string; image: string },
+                k: number,
+              ) => (
+                <div key={k} className="flex-1">
+                  <div
+                  className="rounded-2xl h-55"
+                    style={{
+                      backgroundImage: `url(${v.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'top',
+                    }}
+                  ></div>
+                  <div className="py-6 text-white">
+                    <p className="text-primary mb-2">{v.subtitle}</p>
+                    <h6>{v.title}</h6>
+                  </div>
+                </div>
+              ),
+            )
+          : ''}
+      </div>
+    </div>
+  );
+};
+
+export default Worship;
