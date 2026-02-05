@@ -6,12 +6,12 @@ import { Button } from './ui/button';
 const Rescue = () => {
   const resc = useGetQuery('rescue', '/rescue') || [];
 
-  console.log(resc[0])
+
 
   return (
-    <div className="container mx-auto py-20 flex">
+    <div className="container mx-auto p-6 sm:p-0 sm:py-20 flex flex-col sm:flex-row">
       <div
-        className="h-112 flex-1 rounded-2xl"
+        className="sm:h-112 sm:py-0 py-80 flex-1 rounded-2xl"
         style={{
           backgroundImage: `url(${resc[0]?.content.image})`,
           backgroundSize: 'cover',

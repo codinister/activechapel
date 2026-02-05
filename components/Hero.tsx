@@ -14,7 +14,7 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'top',
       }}
-      className="hero-overlay h-screen relative"
+      className="hero-overlay h-150 relative"
     >
       <div className="p-6 md:p-0">
         <h6>{sett[0]?.title}</h6>

@@ -6,8 +6,8 @@ const Founder = () => {
 
   
   return (
-    <div className="flex flex-col md:flex-row">
-      <div className="flex-1  p-15 flex items-center">
+    <div className="flex flex-col md:flex-row sm:flex-row">
+      <div className="flex-1  p-6 sm:p-15 flex items-center">
         <div>
         <h6>{founder[0]?.content.subtitle}</h6>
         <h4 className="mb-6">{founder[0]?.content.title}</h4>
@@ -15,7 +15,7 @@ const Founder = () => {
         </div>
       </div>
       <div
-        className="flex-1 h-130"
+        className=" flex-1 sm:h-130 py-80 sm:py-0"
         style={{
           backgroundImage: `url(${founder[0]?.content.image})`,
           backgroundSize: 'cover',

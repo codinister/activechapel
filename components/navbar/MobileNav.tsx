@@ -35,6 +35,7 @@ const MobileNav = () => {
         <SheetContent side="left" className="p-6 w-[85%]">
           <div>
             {sett[0] ? (
+              <Link href="/">
               <motion.img
                 initial={{
                   opacity: 0,
@@ -52,6 +53,7 @@ const MobileNav = () => {
                 height={60}
                 alt=""
               />
+              </Link>
             ) : (
               ''
             )}

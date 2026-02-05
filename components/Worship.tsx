@@ -6,14 +6,14 @@ const Worship = () => {
   const wor = useGetQuery('worship', '/worship');
 
   return (
-    <div className="py-15 bg-secondary">
+    <div className="py-15 bg-secondary px-6 sm:px-0">
 
       <div className="mb-20 text-white text-center">
-      <p>{wor[0]?.subtitle}</p>
-      <h4>{wor[0]?.title}</h4>
+      <p className='text-primary'>{wor[0]?.subtitle}</p>
+      <h3>{wor[0]?.title}</h3>
       </div>
 
-      <div className="flex container mx-auto gap-10">
+      <div className="flex flex-col sm:flex-row container mx-auto gap-10">
         {wor[0]
           ? wor[0]?.content.map(
               (
@@ -30,7 +30,7 @@ const Worship = () => {
                     }}
                   ></div>
                   <div className="py-6 text-white">
-                    <p className="text-primary mb-2">{v.subtitle}</p>
+                    <p className="text-primary">{v.subtitle}</p>
                     <h6>{v.title}</h6>
                   </div>
                 </div>

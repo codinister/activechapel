@@ -18,8 +18,8 @@ const Footer = () => {
   const { hiddenOne, visibleOne } = variantOne();
 
   return (
-    <footer className="bg-secondary py-10">
-      <div className="container p-6 md:p-0 mx-auto flex gap-15 flex-col md:flex-row">
+    <footer className="bg-secondary pt-10">
+      <div className="container p-6 md:p-0 mx-auto flex flex-col sm:flex-row gap-15 md:flex-row">
         <div className="flex-1">
           <h5 className="text-muted mb-4">{sett[0]?.title}</h5>
           <p className="text-white opacity-75">{mission[0]?.content.excerpt}</p>
@@ -82,6 +82,10 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+      </div>
+
+      <div className="container mx-auto pt-10 pb-10  text-center text-white">
+All rights reserved &copy; {sett[0]?.title} { new Date().getFullYear()}
       </div>
     </footer>
   );

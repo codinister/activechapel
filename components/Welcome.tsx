@@ -12,9 +12,9 @@ const Welcome = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'top',
       }}
-      className=" welcome-box h-120"
+      className=" welcome-box sm:h-120 flex-col p-6 sm:flex-row"
      >
-      <div className="w-2xl">
+      <div className="sm:w-2xl">
         <h6 className="text-primary">
           {wlc[0] ? wlc[0]?.content.subtitle : ''}
         </h6>
