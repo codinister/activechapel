@@ -32,7 +32,7 @@ const MobileNav = () => {
             <p>{sett[0] && sett[0]?.title}</p>
           </div>
         </div>
-        <SheetContent className="p-6">
+        <SheetContent side="left" className="p-6 w-[85%]">
           <div>
             {sett[0] ? (
               <motion.img
