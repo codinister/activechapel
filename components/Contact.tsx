@@ -10,7 +10,7 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="container mx-auto flex gap-10 py-20">
+      <div className="container p-6 sm:p-0 mx-auto flex flex-col sm:flex-row   gap-10  sm:py-20">
         <div className="flex-1">
           <h5 className="mb-4">REACHOUT TO OUR CHURCH SUPPORT</h5>
 

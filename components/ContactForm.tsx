@@ -28,7 +28,7 @@ const ContactForm = () => {
     <div className="p-10 border-secondary/25 border-2 rounded-2xl">
       <Form {...form}>
         <form onSubmit={handleSubmit(submitForm)}>
-          <div className="flex gap-6 mb-6">
+          <div className="flex flex-col sm:flex-row  gap-6 mb-6">
             <FormField
               name="firstname"
               control={form.control}
@@ -54,7 +54,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="flex gap-6 mb-6">
+          <div className="flex  flex-col sm:flex-row gap-6 mb-6">
             <FormField
               name="email"
               control={form.control}

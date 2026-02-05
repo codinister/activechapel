@@ -10,13 +10,13 @@ const Connect = () => {
   const conn = useGetQuery('connect', '/connect');
 
   return (
-    <div className="py-20 mx-auto ">
+    <div className="p-6 sm:p-0 sm:px-0 sm:py-20 mx-auto ">
       <div className="text-center mb-12">
         <p>{conn[0] && conn[0]?.subtitle}</p>
         <h4>{conn[0] && conn[0]?.title}</h4>
       </div>
 
-      <div className="flex gap-10 container mx-auto">
+      <div className="flex flex-col sm:flex-row gap-10 container mx-auto">
         {conn[0]
           ? conn[0].content.map(
               (

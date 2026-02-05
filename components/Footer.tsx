@@ -85,7 +85,7 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto pt-10 pb-10  text-center text-white">
-All rights reserved &copy; {sett[0]?.title} { new Date().getFullYear()}
+        All rights reserved &copy; {new Date().getFullYear()} {sett[0]?.title}
       </div>
     </footer>
   );
