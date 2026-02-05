@@ -18,7 +18,7 @@ const Hero = () => {
     >
       <div className="p-6 md:p-0">
         <h6>{sett[0]?.title}</h6>
-        <h1 className="mb-6 font-extrabold">Welcome to our church</h1>
+        <h1 className="mb-8 font-extrabold">Welcome to our church</h1>
         <Link href="/about">
         <Button size="lg">Connect</Button>
         </Link>

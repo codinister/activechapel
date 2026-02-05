@@ -20,17 +20,10 @@ const Home = () => {
       <Hero />
       <Founder />
       <Stats />
-      <Welcome />
       <Weeklyactivities />
-      <Aboutus />
       <Worship />
-      <Nurture />
-      <Family />
-      <Connect />
-      <Caption />
-      <Contact />
       <Rescue />
-      <PageHeader title="Contact Us" />
+      <Welcome />
     </>
   );
 };
