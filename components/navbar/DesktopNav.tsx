@@ -25,7 +25,7 @@ const DesktopNav = () => {
 
   return (
     <nav
-      className={`z-10 w-full text-white fixed top-0 left-0 hidden md:block shadow-lg py-2 ${getScroll > 0.08 ? 'bg-white fixed top-0  left-0 w-full' : ''}`}
+      className={`z-10 w-full text-white fixed top-0 left-0 hidden sm:block md:block shadow-lg py-2 ${getScroll > 0.08 ? 'bg-white fixed top-0  left-0 w-full' : ''}`}
     >
       <div className="container flex gap-20 mx-auto ">
         <div>

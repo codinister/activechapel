@@ -8,15 +8,19 @@ import animDuration from '@/utils/animDuration';
 import { motion } from 'motion/react';
 import { variantOne } from '@/utils/animVariants';
 import useGetQuery from '@/state/query/useGetQuery';
+import { useState } from 'react';
+import Link from 'next/link';
 
 const MobileNav = () => {
   const data = navData;
   const { hiddenOne, visibleOne } = variantOne();
   const sett = useGetQuery('settings', '/settings') || [];
 
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className=" block md:hidden">
-      <Sheet>
+    <div className=" block md:hidden sm:hidden">
+      <Sheet open={open} onOpenChange={setOpen}>
         <div className="px-6 py-1 flex items-center justify-between shadow-lg fixed top-0 left-0 z-10 bg-white w-full">
           <div>
             <SheetTrigger className="mt-2">
@@ -54,18 +58,9 @@ const MobileNav = () => {
             <ul className="mt-14">
               {data.map((v, k) => (
                 <li key={k} className="mb-6">
-                  <motion.a
-                    initial={hiddenOne}
-                    animate={visibleOne}
-                    transition={{
-                      delay: animDuration(k, 4) * 0.5,
-                      duration: 1,
-                      ease: 'easeIn',
-                    }}
-                    href={v.path}
-                  >
+                  <Link onClick={() => setOpen(false)} href={v.path}>
                     {v.name}
-                  </motion.a>
+                  </Link>
                 </li>
               ))}
             </ul>
