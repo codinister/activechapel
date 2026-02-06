@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 const MobileNav = () => {
   const data = navData;
-  const { hiddenOne, visibleOne } = variantOne();
+
   const sett = useGetQuery('settings', '/settings') || [];
 
   const [open, setOpen] = useState(false);
@@ -44,7 +44,7 @@ const MobileNav = () => {
                   opacity: 1,
                   transition: {
                     duration: 2,
-                    delay: 1.5,
+                    delay: 0.5,
                     ease: 'easeIn',
                   },
                 }}

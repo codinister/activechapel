@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Active Believers Chapel International',
-  description: 'Based in Ghana and UK',
+  description: 'A Christ-centered church dedicated to raising active believers who live out their faith daily',
 };
 
 export default function RootLayout({
