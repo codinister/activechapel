@@ -51,7 +51,7 @@ const DesktopNav = () => {
             ''
           )}
         </div>
-        <div className="flex items-center justify-start gap-10      flex-8">
+        <div className="flex items-center justify-start gap-10      flex-10">
           {data.map((v, k) => (
             <motion.a
               initial={hiddenOne}
@@ -63,7 +63,7 @@ const DesktopNav = () => {
               }}
               key={k}
               href={v.path}
-              className={`${getScroll > 0.08 && 'text-black'}`}
+              className={`   ${getScroll > 0.08 && 'text-black'}`}
             >
               {v.name}
             </motion.a>

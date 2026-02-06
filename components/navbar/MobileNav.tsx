@@ -60,7 +60,7 @@ const MobileNav = () => {
             <ul className="mt-14">
               {data.map((v, k) => (
                 <li key={k} className="mb-6">
-                  <Link onClick={() => setOpen(false)} href={v.path}>
+                  <Link className='text-2xl' onClick={() => setOpen(false)} href={v.path}>
                     {v.name}
                   </Link>
                 </li>
